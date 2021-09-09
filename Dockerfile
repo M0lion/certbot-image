@@ -1,12 +1,14 @@
 FROM arm32v7/node
 
+USER root
+
 # Update snap
-RUN sudo snap install core
-RUN sudo snap refresh core
+RUN snap install core
+RUN snap refresh core
 
 # Install certbot
-RUN sudo snap install --classic certbot
+RUN snap install --classic certbot
 
 EXPOSE 80
 
-CMD sudo certbot certonly --standalone
+CMD certbot certonly --standalone
