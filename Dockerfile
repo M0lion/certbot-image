@@ -8,7 +8,7 @@ RUN apt install -y snapd
 
 RUN systemctl unmask snapd.service
 RUN systemctl enable snapd.service
-RUN systemctl sart snapd.service
+RUN systemctl start snapd.service
 
 # Update snap
 RUN snap install core
