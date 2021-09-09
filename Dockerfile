@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM arm32v7/node
 
 # Update snap
 RUN sudo snap install core
