@@ -6,4 +6,4 @@ EXPOSE 80
 
 RUN curl https://get.acme.sh | sh -s email=bjorn-moholt@hotmail.com
 
-CMD sh
+CMD sleep 9999
