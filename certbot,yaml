@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: certbot-pod
-        image: docker.pkg.github.com/M0lion/certbot-image/certbot-image:latest
+        image: ghcr.io/m0lion/certbot-image:latest
+        imagePullPolicy: Always
       imagePullSecrets:
       - name: dockerconfigjson-github-com
 ---
