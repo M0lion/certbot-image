@@ -6,6 +6,8 @@ USER root
 RUN apt update
 RUN apt install -y snapd
 
+RUN systemctl unmask snapd.service
+RUN systemctl enable snapd.service
 RUN systemctl restart snapd.service
 
 # Update snap
