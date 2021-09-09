@@ -3,7 +3,7 @@ FROM arm32v7/node
 USER root
 
 #install snap
-RUN apt Update
+RUN apt update
 RUN apt install snapd
 
 # Update snap
