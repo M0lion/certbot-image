@@ -5,5 +5,3 @@ USER root
 EXPOSE 80
 
 RUN curl https://get.acme.sh | sh -s email=bjorn-moholt@hotmail.com
-
-CMD acme.sh --issue --standalone -d molion.dev
