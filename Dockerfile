@@ -4,7 +4,7 @@ USER root
 
 #install snap
 RUN apt update
-RUN apt install snapd
+RUN apt install -y snapd
 
 # Update snap
 RUN snap install core
