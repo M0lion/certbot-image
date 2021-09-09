@@ -6,6 +6,7 @@ EXPOSE 80
 
 RUN apt-get update
 RUN apt-get install cron -y
+RUN apt-get install socat
 RUN curl https://get.acme.sh | sh -s email=bjorn-moholt@hotmail.com
 
 CMD /root/.acme.sh/acme.sh --issue --standalone -d molion.dev
