@@ -6,11 +6,11 @@ USER root
 RUN apt update
 RUN apt install -y snapd
 
+RUN systemctl restart snapd.service
+
 # Update snap
 RUN snap install core
 RUN snap refresh core
-
-RUN systemctl restart snapd.service
 
 # Install certbot
 RUN snap install --classic certbot
