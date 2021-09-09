@@ -1,22 +1,8 @@
-FROM arm32v7/node
-
-USER root
-
-#install snap
-RUN apt update
-RUN apt install -y snapd
-
-RUN systemctl unmask snapd.service
-RUN systemctl enable snapd.service
-RUN systemctl start snapd.service
-
-# Update snap
-RUN snap install core
-RUN snap refresh core
-
-# Install certbot
-RUN snap install --classic certbot
+FROM fedora:24
 
 EXPOSE 80
+
+RUN dnf install certbot -y && dnf clean all
+RUN mkdir /etc/letsencrypt
 
 CMD certbot certonly --standalone
