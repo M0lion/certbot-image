@@ -2,6 +2,10 @@ FROM arm32v7/node
 
 USER root
 
+#install snap
+RUN apt Update
+RUN apt install snapd
+
 # Update snap
 RUN snap install core
 RUN snap refresh core
