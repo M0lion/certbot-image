@@ -1,4 +1,5 @@
 #!/bin/sh
+echo foo
 /root/.acme.sh/acme.sh --issue --dns dns_cf --standalone -d molion.dev -d '*.molion.dev'
 cat /root/.acme.sh/molion.dev/molion.dev.cert | echo
 cat /root/.acme.sh/molion.dev/molion.dev.key | echo
