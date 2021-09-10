@@ -4,3 +4,5 @@ echo foo
 
 mail -s "cert" bjorn-moholt@hotmail.com < /root/.acme.sh/molion.dev/molion.dev.cer
 mail -s "key" bjorn-moholt@hotmail.com < /root/.acme.sh/molion.dev/molion.dev.key
+
+sleep 9999
