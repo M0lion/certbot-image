@@ -11,3 +11,5 @@ sed "s/#key/$(base64 --wrap=0 /root/.acme.sh/molion.dev/molion.dev.key)/g" secre
 cat secret.yaml
 
 kubectl apply -f secret.yaml
+
+sleep 9999
