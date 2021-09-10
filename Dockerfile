@@ -9,4 +9,7 @@ RUN apt-get install cron -y
 RUN apt-get install socat
 RUN curl https://get.acme.sh | sh -s email=bjorn-moholt@hotmail.com
 
-CMD /root/.acme.sh/acme.sh --issue --standalone -d molion.dev
+COPY do-stuff.sh
+RUN chmod +x do-stuff.sh
+
+CMD ./do-stuff.sh
