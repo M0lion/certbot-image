@@ -1,4 +1,4 @@
-FROM arm32v7/node
+FROM bitnami/kubectl
 
 USER root
 
@@ -8,8 +8,6 @@ RUN apt-get update
 RUN apt-get install cron -y
 RUN apt-get install socat
 RUN curl https://get.acme.sh | sh -s email=bjorn-moholt@hotmail.com
-
-RUN apt-get install kubectl -y
 
 COPY secret.yaml secret.yaml
 
