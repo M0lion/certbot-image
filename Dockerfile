@@ -14,4 +14,4 @@ COPY secret.yaml secret.yaml
 COPY do-stuff.sh do-stuff.sh
 RUN chmod +x do-stuff.sh
 
-CMD ./do-stuff.sh
+CMD sudo ./do-stuff.sh
